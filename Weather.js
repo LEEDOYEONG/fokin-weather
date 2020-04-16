@@ -74,6 +74,9 @@ export default function Weather(props){
                     <Text style={styles.title}>{weatherOption[props.condition].title}</Text>
                     <Text style={styles.subtitle}>{weatherOption[props.condition].subtitle}</Text>
                 </View>
+                <View style={styles.copyright}>
+                <Text style={styles.copryrightText}>LEE DO YEONG</Text>
+                </View>
             </LinearGradient>
           ) 
 }
@@ -96,9 +99,7 @@ Weather.propTypes = {
 
 const styles = StyleSheet.create({
     container : {
-        flex : 1,
-        justifyContent : "center",
-        alignItems : "center"
+        flex : 1
     },
     temp : {
         fontSize : 42,
@@ -124,6 +125,15 @@ const styles = StyleSheet.create({
         flex : 1,
         justifyContent : "center",
         paddingHorizontal : 10,
-        alignItems : "flex-start"
+        alignItems : "center"
+    },
+    copyright : {
+        justifyContent : "flex-end",
+        alignItems : "flex-end"
+    },
+    copryrightText : {
+        color : "white",
+        fontSize : 18,
+        fontWeight : "300"
     }
 });
